@@ -180,16 +180,25 @@
       </section>
 
       <!-- Core Loops Section (Now 2x2 Grid) -->
+      <div class="section-intro">
+        <div class="section-badge i18n" data-tr="Nasıl Çalışır?" data-en="How It Works">Nasıl Çalışır?</div>
+        <h2 class="section-heading i18n" data-tr="Her eşyanın bir hikayesi var." data-en="Every item has a story.">Her eşyanın bir hikayesi var.</h2>
+        <p class="section-sub i18n" data-tr="Dört basit yolla dönüşüme katıl." data-en="Four simple ways to join the cycle.">Dört basit yolla dönüşüme katıl.</p>
+      </div>
+
       <section class="core-loops">
         <!-- Swap Card -->
-        <div class="loop-card glass-card hover-lift">
+        <div class="loop-card card-swap glass-card hover-lift">
+          <div class="card-num">01</div>
           <div class="loop-visual">
             <div class="ui-snippet-mini">
-              <div class="ui-card mini">
+              <div class="ui-card mini swap-item-card">
+                <div class="swap-item-icon">📷</div>
                 <div class="ui-text i18n" data-tr="Senin Eşyan" data-en="Your Item">Senin Eşyan</div>
               </div>
-              <div class="swap-icon">⇄</div>
-              <div class="ui-card mini target">
+              <div class="swap-arrow">⇄</div>
+              <div class="ui-card mini swap-item-card target">
+                <div class="swap-item-icon">🎸</div>
                 <div class="ui-text i18n" data-tr="Onun Eşyası" data-en="Their Item">Onun Eşyası</div>
               </div>
             </div>
@@ -202,13 +211,13 @@
           </p>
         </div>
 
-        <!-- Gift Card (Moved to 2nd position) -->
-        <div class="loop-card glass-card hover-lift">
+        <!-- Gift Card -->
+        <div class="loop-card card-gift glass-card hover-lift">
+          <div class="card-num">02</div>
           <div class="loop-visual">
             <div class="ui-snippet-mini">
-              <div class="ui-card mini gift-card"
-                style="background: linear-gradient(135deg, #c9f3df, #60ddb1); color:#130922;">
-                <div class="gift-icon">🎁</div>
+              <div class="feature-icon-wrap gift-wrap">
+                <span class="feature-icon">🎁</span>
               </div>
             </div>
           </div>
@@ -222,15 +231,16 @@
         </div>
 
         <!-- Buy Card -->
-        <div class="loop-card glass-card hover-lift">
+        <div class="loop-card card-buy glass-card hover-lift">
+          <div class="card-num">03</div>
           <div class="loop-visual">
             <div class="ui-snippet-mini">
-              <div class="ui-card mini gift-card">
-                <div class="gift-icon">🛒</div>
+              <div class="feature-icon-wrap buy-wrap">
+                <span class="feature-icon">🛒</span>
               </div>
             </div>
           </div>
-          <h2><span class="i18n" data-tr="Satın Al" data-en="Buy">Satın Al</span></h2>
+          <h2 class="i18n" data-tr="Satın Al" data-en="Buy">Satın Al</h2>
           <p class="i18n"
             data-tr="Harika bir parça buldunuz ama verecek eşyanız mı yok? Hiç dert değil! O eşyayı satın alarak yeniden kullanıma kazandırın."
             data-en="Found something amazing but have nothing to trade? No worries! Give the item a second life by buying it directly.">
@@ -240,7 +250,8 @@
         </div>
 
         <!-- Message Card -->
-        <div class="loop-card glass-card hover-lift">
+        <div class="loop-card card-msg glass-card hover-lift">
+          <div class="card-num">04</div>
           <div class="loop-visual">
             <div class="ui-snippet-mini message-snippet">
               <div class="chat-bubble left i18n" data-tr="Merhaba! Lamba duruyor mu?"
