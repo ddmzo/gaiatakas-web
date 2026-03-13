@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "co.ztudio.gaiatakas",
+      "sha256_cert_fingerprints": [
+        "50:00:9E:0E:8F:FF:E0:C7:C6:FC:B8:ED:EF:CB:DA:7B:C5:51:45:12:70:9B:76:97:23:4D:5D:37:A1:C8:E2:6F"
+      ]
+    }
+  }
+]
