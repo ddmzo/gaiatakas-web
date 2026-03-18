@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GaiaTakas | Çok Yakında</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css?v=7" />
-  <link rel="stylesheet" href="/share.css?v=1" />
+  <link rel="stylesheet" href="./styles.css?v=7" />
+  <link rel="stylesheet" href="./share.css?v=1" />
 </head>
 
 <body class="landing-body">
@@ -23,16 +23,17 @@
           <svg viewBox="0 0 64 64" class="gaia-leaf">
             <path fill="currentColor"
               d="M47.6 15.4c-9.8 1.1-17.4 4.4-22.4 9.7-7.4 7.8-7.4 18.5-.2 24.3 4.2 3.4 10 4.6 15.1 3 8.8-2.8 15.1-12.4 13.6-24.9-.2-1.7-.6-3.5-1.2-5.2-.8-2.2-1.9-4.5-3.5-6.9-.3-.4-.7-.6-1.4-.5Z" />
-            <path fill="#7DEBCB"
+            <path fill="#6EE7B7"
               d="M18.8 47.9c8.3-4.1 16.1-9.6 23.6-16.5 2.7-2.5 5.2-5 7.3-7.4.6-.7 1.8-.8 2.5-.2.7.6.8 1.8.2 2.5-2.2 2.6-4.8 5.2-7.6 7.8-7.8 7.2-16 12.9-24.7 17.2-.9.4-1.9.1-2.4-.7-.4-.9-.1-1.9.7-2.3Z" />
           </svg>
         </div>
         <span>GaiaTakas</span>
       </a>
       <div class="header-right">
-        <button id="lang-toggle" class="lang-btn">EN</button>
-        <a class="button button-primary pill-button i18n" data-tr="Uygulamayı İndir" data-en="Download App"
-          href="#join">Uygulamayı İndir</a>
+        <div class="lang-switch">
+          <button class="lang-opt active" onclick="setLanguage('tr')" id="langTr">TR</button>
+          <button class="lang-opt" onclick="setLanguage('en')" id="langEn">EN</button>
+        </div>
       </div>
     </header>
 
@@ -41,15 +42,14 @@
       <section class="hero-section">
         <div class="hero-content">
           <h1 class="hero-title i18n"
-            data-tr="Paylaş. Takasla. Sevindir. <br/><span class='text-gradient'>İsrafı Önle.</span>"
-            data-en="Share. Swap. Bring Joy. <br/><span class='text-gradient'>Prevent Waste.</span>">
-            Paylaş. Takasla. Sevindir. <br /><span class="text-gradient">İsrafı Önle.</span>
+            data-tr="Takasla, Hediye Et veya Satın Al. <br/><span class='text-gradient'>Eşyalara Yeni Bir Hayat Ver.</span>"
+            data-en="Swap, Gift, or Buy. <br/><span class='text-gradient'>Give Items a New Life.</span>">
+            Takasla, Hediye Et veya Satın Al. <br /><span class="text-gradient">Eşyalara Yeni Bir Hayat Ver.</span>
           </h1>
           <p class="hero-subtitle i18n"
-            data-tr="Kıymetli eşyalar köşede beklemesin; onları takaslayın veya ihtiyacı olan birine hediye ederek sevindirin. Takas edecek bir şeyiniz yok mu? O halde satın alarak dönüşüme destek olun."
-            data-en="Don't let precious items gather dust. Swap them or bring joy by gifting them. Have nothing to swap? Support the cycle by buying directly.">
-            Kıymetli eşyalar köşede beklemesin; onları takaslayın veya ihtiyacı olan birine hediye ederek sevindirin.
-            Takas edecek bir şeyiniz yok mu? O halde satın alarak dönüşüme destek olun.
+            data-tr="Kullanmadığınız eşyaları takaslayarak veya hediye ederek onlara yeni bir hayat verin. Sadece beğendiğiniz bir ürünü mü almak istiyorsunuz? Takas yapmaya gerek kalmadan, doğrudan ve güvenle satın alarak doğa dostu pazar yerimizin tadını çıkarın."
+            data-en="Give your unused items a new life by trading or gifting them. Just want to buy a product you liked? Enjoy our eco-friendly marketplace by safely purchasing directly, without needing to trade.">
+            Kullanmadığınız eşyaları takaslayarak veya hediye ederek onlara yeni bir hayat verin. Sadece beğendiğiniz bir ürünü mü almak istiyorsunuz? Takas yapmaya gerek kalmadan, doğrudan ve güvenle satın alarak doğa dostu pazar yerimizin tadını çıkarın.
           </p>
           <div class="hero-actions store-buttons">
             <a class="store-btn" href="#">
@@ -82,13 +82,14 @@
           <div class="mockup-pedestal"></div>
           <!-- Refined Phone Mockup matching real Explore UI -->
           <div class="phone-mockup floating">
+            <div class="dynamic-island"></div>
             <div class="explore-ui">
               <!-- Top Status Bar Area -->
               <div class="explore-top">
                 <div class="explore-header-row">
                   <div class="explore-header">Explore</div>
                   <div class="explore-header-icons">
-                    <div class="icon-circle filter-icon"></div>
+                    <div class="icon-circle filter-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg></div>
                   </div>
                 </div>
                 <div class="explore-tabs">
@@ -96,8 +97,8 @@
                   <div class="explore-tab">Gift Items</div>
                 </div>
                 <div class="explore-pills">
-                  <div class="pill active"><span class="pill-icon">㗊</span> All</div>
-                  <div class="pill"><span class="pill-icon">⌂</span> Home & Living</div>
+                  <div class="pill active"><span class="pill-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg></span> All</div>
+                  <div class="pill"><span class="pill-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span> Home & Living</div>
                 </div>
                 <div class="explore-section-title">Showcase</div>
               </div>
@@ -158,20 +159,20 @@
               <!-- Bottom Tab Bar -->
               <div class="explore-bottom-nav">
                 <div class="nav-item active">
-                  <div class="nav-icon">㗊</div>
+                  <div class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg></div>
                   <span>Explore</span>
                 </div>
                 <div class="nav-item">
-                  <div class="nav-icon">⇄</div>
+                  <div class="nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><line x1="3" y1="5" x2="21" y2="5"></line><polyline points="7 23 3 19 7 15"></polyline><line x1="21" y1="19" x2="3" y2="19"></line></svg></div>
                   <span>Fast Swipe</span>
                 </div>
-                <div class="nav-fab">+</div>
+                <div class="nav-fab"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
                 <div class="nav-item">
-                  <div class="nav-icon">💬</div>
+                  <div class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path></svg></div>
                   <span>Messages</span>
                 </div>
                 <div class="nav-item">
-                  <div class="nav-icon">👤</div>
+                  <div class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                   <span>Profile</span>
                 </div>
               </div>
@@ -192,23 +193,15 @@
         <div class="loop-card card-swap glass-card hover-lift">
           <div class="card-num">01</div>
           <div class="loop-visual">
-            <div class="nano-swap">
-              <div class="nano-item nano-item-left">
-                <div class="nano-icon">📷</div>
-                <span class="nano-label i18n" data-tr="Senin Eşyan" data-en="Your Item">Senin Eşyan</span>
-              </div>
-              <div class="nano-circle">⇄</div>
-              <div class="nano-item nano-item-right">
-                <div class="nano-icon">🎸</div>
-                <span class="nano-label i18n" data-tr="Onun Eşyası" data-en="Their Item">Onun Eşyası</span>
-              </div>
+            <div class="ai-hero-image">
+              <img src="takas.png" alt="Takas - Kamera ve Kulaklık" class="hero-render" />
             </div>
           </div>
           <h2 class="i18n" data-tr="Takas" data-en="Swap">Takas</h2>
           <p class="i18n"
-            data-tr="Gözden çıkardığınız ama hala değerli olan eşyalarınızı, ihtiyacınız olanlarla takas edin."
-            data-en="Trade items you no longer use for things you actually need, keeping value in motion.">
-            Gözden çıkardığınız ama hala değerli olan eşyalarınızı, ihtiyacınız olanlarla takas edin.
+            data-tr="Birinin fazlası, diğerinin eksiği olabilir. Kullanmadığınız eşyaları yepyeni serüvenlere uğurlayın ve aradığınız o parçaya para harcamadan sahip olun."
+            data-en="One's excess is another's necessity. Send your unused items on new adventures and get exactly what you've been looking for without spending a dime.">
+            Birinin fazlası, diğerinin eksiği olabilir. Kullanmadığınız eşyaları yepyeni serüvenlere uğurlayın ve aradığınız o parçaya para harcamadan sahip olun.
           </p>
         </div>
 
@@ -216,19 +209,16 @@
         <div class="loop-card card-gift glass-card hover-lift">
           <div class="card-num">02</div>
           <div class="loop-visual">
-            <div class="nano-gift">
-              <div class="nano-box">
-                <div class="nano-icon">🎁</div>
-                <div class="nano-ribbon i18n" data-tr="ÜCRETSİZ" data-en="FREE">ÜCRETSİZ</div>
-              </div>
+            <div class="ai-hero-image" style="position: relative;">
+              <img src="hediye.png" alt="Hediye - Kitaplar" class="hero-render" />
+              <div class="nano-ribbon i18n" data-tr="ÜCRETSİZ" data-en="FREE" style="position: absolute; top: 8px; right: 8px;">ÜCRETSİZ</div>
             </div>
           </div>
           <h2 class="i18n" data-tr="Hediye" data-en="Gift">Hediye</h2>
           <p class="i18n"
-            data-tr="Fazlalıklarınız başkasının eksiği olabilir. Kullanmadığınız eşyaları mutlu edebilecek insanlarla paylaşıp israfı önleyin."
-            data-en="Your extras could be someone's essentials. Share unused items to bring joy and prevent waste.">
-            Fazlalıklarınız başkasının eksiği olabilir. Kullanmadığınız eşyaları mutlu edebilecek insanlarla paylaşıp
-            israfı önleyin.
+            data-tr="Dolabınızda bekleyen o güzel eşya, bir başkasının tam da hayalini kurduğu şey olabilir. Gönlünüzden kopan bir hediyeyle hem israfı önleyin hem de kalp kazanın."
+            data-en="That beautiful item waiting in your closet could be exactly what someone else is dreaming of. Prevent waste and win a heart with a heartfelt gift.">
+            Dolabınızda bekleyen o güzel eşya, bir başkasının tam da hayalini kurduğu şey olabilir. Gönlünüzden kopan bir hediyeyle hem israfı önleyin hem de kalp kazanın.
           </p>
         </div>
 
@@ -236,47 +226,111 @@
         <div class="loop-card card-buy glass-card hover-lift">
           <div class="card-num">03</div>
           <div class="loop-visual">
-            <div class="nano-buy">
-              <div class="nano-box">
-                <div class="nano-icon">🛒</div>
-                <div class="nano-price-tag">₺800</div>
-              </div>
-              <div class="nano-buy-btn i18n" data-tr="Satın Al →" data-en="Buy Now →">Satın Al →</div>
+            <div class="ai-hero-image" style="position: relative;">
+              <img src="satinal.png" alt="Satın Al - Tablet" class="hero-render" />
+              <div class="nano-price-tag" style="position: absolute; top: 8px; right: 8px;">₺800</div>
+              <div class="nano-buy-btn i18n" data-tr="Satın Al →" data-en="Buy Now →" style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%);">Satın Al →</div>
             </div>
           </div>
           <h2 class="i18n" data-tr="Satın Al" data-en="Buy">Satın Al</h2>
           <p class="i18n"
-            data-tr="Harika bir parça buldunuz ama verecek eşyanız mı yok? Hiç dert değil! O eşyayı satın alarak yeniden kullanıma kazandırın."
-            data-en="Found something amazing but have nothing to trade? No worries! Give the item a second life by buying it directly.">
-            Harika bir parça buldunuz ama verecek eşyanız mı yok? Hiç dert değil! O eşyayı satın alarak yeniden
-            kullanıma kazandırın.
+            data-tr="Gözünüze harika bir parça kestirdiniz ama takas yapacak ürününüz mü yok? Sorun değil. Doğrudan ve güvenle satın alarak döngüye hemen katılın."
+            data-en="Spotted a great piece but have nothing to trade? No problem. Jump right into the sustainable cycle by safely purchasing it directly.">
+            Gözünüze harika bir parça kestirdiniz ama takas yapacak ürününüz mü yok? Sorun değil. Doğrudan ve güvenle satın alarak döngüye hemen katılın.
+          </p>
+        </div>
+
+        <!-- Advanced Swap Card -->
+        <div class="loop-card card-advanced glass-card hover-lift">
+          <div class="card-num">04</div>
+          <div class="loop-visual">
+            <div class="ai-hero-image" style="position: relative;">
+              <img src="esnektakas.png" alt="Esnek Takas - Laptop, Saat, Telefon" class="hero-render" />
+              <div style="background: var(--green); color: var(--bg-deep); font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 6px; position: absolute; top: 8px; right: 8px; box-shadow: 0 4px 8px rgba(16,185,129,0.3);">+₺1.500</div>
+            </div>
+          </div>
+          <h2 class="i18n" data-tr="Esnek Takas" data-en="Flexible Swap">Esnek Takas</h2>
+          <p class="i18n"
+            data-tr="Karşı tarafın ürünü daha mı değerli? İsterseniz birden fazla ürününüzü birleştirin, isterseniz eksik kalan değeri nakit ile tamamlayarak hayalinizdeki eşyaya kolayca ulaşın."
+            data-en="Is the other party's item more valuable? Combine multiple items or pay the difference in cash to easily get the item of your dreams.">
+            Karşı tarafın ürünü daha mı değerli? İsterseniz birden fazla ürününüzü birleştirin, isterseniz eksik kalan değeri nakit ile tamamlayarak hayalinizdeki eşyaya kolayca ulaşın.
           </p>
         </div>
 
         <!-- Message Card -->
         <div class="loop-card card-msg glass-card hover-lift">
-          <div class="card-num">04</div>
+          <div class="card-num">05</div>
           <div class="loop-visual">
             <div class="chat-mini">
               <div class="chat-row left">
                 <div class="chat-av av-1"></div>
-                <div class="chat-bubble left i18n" data-tr="Lamba hala duruyor mu? 👀" data-en="Is the lamp still available? 👀">Lamba hala duruyor mu? 👀</div>
+                <div class="chat-bubble left i18n" data-tr="Merhaba! Kahve makineniz çok güzel, ilanımdaki akustik gitarla takas düşünür müsünüz? 🎸" data-en="Hi! Your coffee maker looks great, would you consider trading it for my acoustic guitar? 🎸">Merhaba! Kahve makineniz çok güzel, ilanımdaki akustik gitarla takas düşünür müsünüz? 🎸</div>
               </div>
               <div class="chat-row right">
-                <div class="chat-bubble right i18n" data-tr="Evet! Takasla almak ister misin?" data-en="Yes! Want to swap for it?">Evet! Takasla almak ister misin?</div>
+                <div class="chat-bubble right i18n" data-tr="Harika teklif! Gitar tam da aradığım şeydi, anlaştık! 🤝" data-en="Awesome offer! The guitar is exactly what I was looking for, deal! 🤝">Harika teklif! Gitar tam da aradığım şeydi, anlaştık! 🤝</div>
                 <div class="chat-av av-2"></div>
               </div>
               <div class="chat-row left">
                 <div class="chat-av av-1"></div>
-                <div class="chat-bubble left i18n" data-tr="Kesinlikle! 🎉" data-en="Absolutely! 🎉">Kesinlikle! 🎉</div>
+                <div class="chat-bubble left i18n" data-tr="Süper! Yarın Kadıköy'de değiş-tokuş yapalım. 🎉" data-en="Great! Let's swap tomorrow in Kadıköy. 🎉">Süper! Yarın Kadıköy'de değiş-tokuş yapalım. 🎉</div>
               </div>
             </div>
           </div>
           <h2 class="i18n" data-tr="Mesaj" data-en="Message">Mesaj</h2>
           <p class="i18n"
-            data-tr="Sıcak ve samimi bir iletişimle eşyaların hikayesini dinleyin, teslimatları güvenle ayarlayın."
-            data-en="Connect warmly to hear the story behind the items, and coordinate pickups with confidence.">
-            Sıcak ve samimi bir iletişimle eşyaların hikayesini dinleyin, teslimatları güvenle ayarlayın.
+            data-tr="Takasın en keyifli yanı yeni hikayeler paylaşmaktır. Samimi bir iletişimle eşyaların anılarını dinleyin ve teslimat süreçlerini dostça planlayın."
+            data-en="The most enjoyable part of swapping is sharing stories. Listen to the memories attached to items and plan deliveries amicably through warm communication.">
+            Takasın en keyifli yanı yeni hikayeler paylaşmaktır. Samimi bir iletişimle eşyaların anılarını dinleyin ve teslimat süreçlerini dostça planlayın.
+          </p>
+        </div>
+
+        <!-- Need Request (Askıda İhtiyaç) Card -->
+        <div class="loop-card card-need glass-card hover-lift">
+          <div class="card-num">06</div>
+          <div class="loop-visual" style="height: auto; padding: 20px 0;">
+            <div class="need-requests-list" style="display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;">
+              
+              <!-- Request 1 -->
+              <div class="need-ticket glass-card hover-lift" style="padding: 14px 18px; border-radius: 12px; background: rgba(96, 221, 177, 0.05); border: 1px solid rgba(96, 221, 177, 0.2); width: 280px; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                  <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--purple); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">MÜ</div>
+                  <div style="line-height: 1.2;">
+                    <div style="font-size: 11px; font-weight: 700; color: #fff;" class="i18n" data-tr="Marmara Üni. • Öğrenci" data-en="Marmara Uni. • Student">Marmara Üni. • Öğrenci</div>
+                    <div style="font-size: 9px; color: var(--text-muted);" class="i18n" data-tr="2 saat önce" data-en="2 hours ago">2 saat önce</div>
+                  </div>
+                </div>
+                <div style="font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #fff;" class="i18n" data-tr="Mimarlık çizim seti ihtiyacı 📐" data-en="Need architecture drawing set 📐">Mimarlık çizim seti ihtiyacı 📐</div>
+                <div style="font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 14px; line-height: 1.4;" class="i18n" data-tr="&#34;Merhaba, birinci sınıf öğrencisiyim. İkinci el T cetveli ve gönye takımına ihtiyacım var...&#34;" data-en="&#34;Hello, I'm a freshman. I need a second-hand T-square and set squares...&#34;">"Merhaba, birinci sınıf öğrencisiyim. İkinci el T cetveli ve gönye takımına ihtiyacım var..."</div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 10px; padding: 4px 8px; background: rgba(96,221,177,0.15); color: var(--green-light); border-radius: 6px; font-weight: 700;" class="i18n" data-tr="Kırtasiye & Eğitim" data-en="Stationery">Kırtasiye & Eğitim</span>
+                  <button style="background: var(--green); color: var(--bg-deep); border: none; padding: 6px 14px; border-radius: 8px; font-weight: 700; font-size: 11px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" class="i18n" data-tr="Destek Ol ♡" data-en="Support ♡">Destek Ol ♡</button>
+                </div>
+              </div>
+
+              <!-- Request 2 -->
+              <div class="need-ticket glass-card hover-lift" style="padding: 14px 18px; border-radius: 12px; background: rgba(129, 77, 229, 0.05); border: 1px solid rgba(129, 77, 229, 0.2); width: 280px; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                  <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--green); color: var(--bg-deep); display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 11px;">YT</div>
+                  <div style="line-height: 1.2;">
+                    <div style="font-size: 11px; font-weight: 700; color: #fff;" class="i18n" data-tr="Yıldız Teknik • Öğrenci" data-en="Yildiz Tech. • Student">Yıldız Teknik • Öğrenci</div>
+                    <div style="font-size: 9px; color: var(--text-muted);" class="i18n" data-tr="5 saat önce" data-en="5 hours ago">5 saat önce</div>
+                  </div>
+                </div>
+                <div style="font-size: 13px; font-weight: 600; margin-bottom: 6px; color: #fff;" class="i18n" data-tr="Yazılım laptobum bozuldu 💻" data-en="My laptop broke down 💻">Yazılım laptobum bozuldu 💻</div>
+                <div style="font-size: 11px; color: rgba(255,255,255,0.7); margin-bottom: 14px; line-height: 1.4;" class="i18n" data-tr="&#34;Proje dönemindeyim ancak bilgisayarımın ekranı kırıldı. Ödünç verebilecek biri var mı?&#34;" data-en="&#34;I'm in project week but my screen broke. Is there anyone who can lend me one?&#34;">"Proje dönemindeyim ancak bilgisayarımın ekranı kırıldı. Ödünç verebilecek biri var mı?"</div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 10px; padding: 4px 8px; background: rgba(129,77,229,0.15); color: #c4a5f8; border-radius: 6px; font-weight: 700;" class="i18n" data-tr="Elektronik" data-en="Electronics">Elektronik</span>
+                  <button style="background: var(--purple-light); color: #fff; border: none; padding: 6px 14px; border-radius: 8px; font-weight: 700; font-size: 11px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" class="i18n" data-tr="Destek Ol ♡" data-en="Support ♡">Destek Ol ♡</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <h2 class="i18n" data-tr="Askıda İhtiyaç" data-en="Need Request">Askıda İhtiyaç</h2>
+          <p class="i18n"
+            data-tr="Dayanışma yaşatır! Uygulama içindeki askıya bırakılmış talepleri inceleyin. Kullanmadığınız bir eşya, bir başkasının eksiğini tamamlayarak topluluğumuza umut olabilir."
+            data-en="Solidarity keeps us together! Review requests left on the hanger in the app. An item you no longer use could fulfill someone else's need and bring hope to our community.">
+            Dayanışma yaşatır! Uygulama içindeki askıya bırakılmış talepleri inceleyin. Kullanmadığınız bir eşya, bir başkasının eksiğini tamamlayarak topluluğumuza umut olabilir.
           </p>
         </div>
       </section>
@@ -469,16 +523,25 @@
     </div>
   </div>
 
-  <script src="/share.js?v=1"></script>
+  <script src="./share.js?v=1"></script>
   <script>
     // i18n functionality
     let currentLang = 'tr';
-    const langBtn = document.getElementById('lang-toggle');
+    const langTr = document.getElementById('langTr');
+    const langEn = document.getElementById('langEn');
 
     function setLanguage(lang) {
+      if (currentLang === lang && document.getElementById('doc-lang').lang === lang) return;
       currentLang = lang;
       document.getElementById('doc-lang').lang = lang;
-      langBtn.innerText = lang === 'tr' ? 'EN' : 'TR';
+      
+      if (lang === 'tr') {
+        if(langTr) langTr.classList.add('active');
+        if(langEn) langEn.classList.remove('active');
+      } else {
+        if(langEn) langEn.classList.add('active');
+        if(langTr) langTr.classList.remove('active');
+      }
 
       // Inline text replacements
       document.querySelectorAll('.i18n').forEach(el => {
@@ -494,10 +557,6 @@
         }
       });
     }
-
-    langBtn.addEventListener('click', () => {
-      setLanguage(currentLang === 'tr' ? 'en' : 'tr');
-    });
 
     // Initial language render
     setLanguage(currentLang);

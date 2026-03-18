@@ -7,82 +7,116 @@
     <title>GaiaTakas Privacy Policy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .sub-page { max-width: 900px; margin: 0 auto; padding: 24px; min-height: 100vh; }
+      .sub-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-radius: 100px; margin-bottom: 48px; }
+      .sub-header .landing-brand { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 20px; text-decoration: none; color: var(--text-main); }
+      .sub-nav { display: flex; gap: 8px; }
+      .sub-nav a { color: var(--text-muted); text-decoration: none; font-weight: 700; font-size: 13px; padding: 8px 16px; border-radius: 100px; transition: all 0.3s; border: 1px solid transparent; }
+      .sub-nav a:hover { color: var(--text-main); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); }
+      .sub-nav a.active { color: var(--green-light); background: rgba(96, 221, 177, 0.1); border-color: rgba(96, 221, 177, 0.25); }
+
+      .page-hero { text-align: center; margin-bottom: 48px; }
+      .page-hero .eyebrow { color: var(--green-light); font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+      .page-hero h1 { font-size: 42px; font-weight: 900; margin: 0 0 12px; background: linear-gradient(135deg, #fff, var(--green-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .page-hero .meta { color: var(--text-muted); font-size: 14px; }
+
+      .content-card { padding: 48px; border-radius: 24px; margin-bottom: 32px; }
+      .content-card h2 { font-size: 22px; font-weight: 800; margin: 32px 0 12px; color: var(--green-light); }
+      .content-card h2:first-child { margin-top: 0; }
+      .content-card p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin: 0 0 16px; }
+      .content-card ul { color: var(--text-muted); font-size: 15px; line-height: 2; padding-left: 20px; margin: 0 0 16px; }
+      .content-card li::marker { color: var(--purple-light); }
+      .content-card a { color: var(--green-light); text-decoration: none; font-weight: 700; transition: opacity 0.2s; }
+      .content-card a:hover { opacity: 0.8; }
+
+      .toc-strip { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 40px; }
+      .toc-strip a { color: var(--text-muted); text-decoration: none; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.08); transition: all 0.3s; }
+      .toc-strip a:hover { color: var(--green-light); border-color: rgba(96,221,177,0.3); background: rgba(96,221,177,0.06); }
+
+      @media (max-width: 640px) {
+        .sub-header { flex-direction: column; gap: 12px; padding: 16px 20px; border-radius: 24px; }
+        .page-hero h1 { font-size: 28px; }
+        .content-card { padding: 24px; }
+      }
+    </style>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="site-header-inner">
-          <a class="brand" href="/"><span class="brand-mark">G</span><span>GaiaTakas</span></a>
-          <nav class="nav-links">
-            <a href="/">Home</a>
-            <a href="/terms/">Terms</a>
-            <a href="/support/">Support</a>
-          </nav>
-        </div>
+    <div class="sub-page">
+      <header class="sub-header glass-card">
+        <a class="landing-brand" href="/">
+          <div class="gaia-logo">
+            <svg class="gaia-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L5 22l.41-1.09C9.38 9.47 17 8 17 8z"/><path d="M12.73 3.27A9.97 9.97 0 0 1 21 11c0 .55-.05 1.09-.14 1.62"/></svg>
+          </div>
+          GaiaTakas
+        </a>
+        <nav class="sub-nav">
+          <a href="/">Home</a>
+          <a href="/privacy/" class="active">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/support/">Support</a>
+        </nav>
       </header>
 
-      <main class="policy-layout">
-        <aside class="policy-side">
-          <div class="eyebrow">Policy</div>
-          <h2 class="feature-title" style="margin-top: 16px;">Privacy Policy</h2>
-          <div class="policy-meta">Last updated: March 7, 2026</div>
-          <a href="#data-we-collect">Data we collect</a>
-          <a href="#how-we-use-it">How we use it</a>
-          <a href="#sharing">Data sharing</a>
-          <a href="#deletion">Account deletion</a>
-          <a href="#contact">Contact</a>
-        </aside>
+      <div class="page-hero">
+        <div class="eyebrow">Policy</div>
+        <h1>Privacy Policy</h1>
+        <div class="meta">Last updated: March 7, 2026</div>
+      </div>
 
-        <article class="policy-card">
-          <h1>Privacy Policy</h1>
-          <p>
-            GaiaTakas is a mobile-first marketplace for swaps, gifts, and local item circulation. This
-            policy explains what information we collect, how we use it, and how users can request support
-            or deletion.
-          </p>
+      <div class="toc-strip">
+        <a href="#data-we-collect">Data We Collect</a>
+        <a href="#how-we-use-it">How We Use It</a>
+        <a href="#sharing">Data Sharing</a>
+        <a href="#deletion">Account Deletion</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-          <h2 id="data-we-collect">Data we collect</h2>
-          <ul>
-            <li>Basic account data such as display name, email address, or verified phone number.</li>
-            <li>Profile content such as avatar, bio, handle, and city or location details.</li>
-            <li>Listing content such as titles, descriptions, categories, photos, and swap or gift metadata.</li>
-            <li>Message and conversation data needed to operate offers, swap flows, and support moderation.</li>
-            <li>Technical data such as push notification tokens, session records, and basic request logs.</li>
-          </ul>
+      <article class="content-card glass-card">
+        <p>
+          GaiaTakas is a mobile-first marketplace for swaps, gifts, and local item circulation. This
+          policy explains what information we collect, how we use it, and how users can request support
+          or deletion.
+        </p>
 
-          <h2 id="how-we-use-it">How we use it</h2>
-          <ul>
-            <li>To create and secure user accounts.</li>
-            <li>To show nearby listings and make distance filters work correctly.</li>
-            <li>To operate messaging, reporting, moderation, and swap lifecycle actions.</li>
-            <li>To diagnose reliability, abuse, fraud, and safety issues.</li>
-          </ul>
+        <h2 id="data-we-collect">Data We Collect</h2>
+        <ul>
+          <li>Basic account data such as display name, email address, or verified phone number.</li>
+          <li>Profile content such as avatar, bio, handle, and city or location details.</li>
+          <li>Listing content such as titles, descriptions, categories, photos, and swap or gift metadata.</li>
+          <li>Message and conversation data needed to operate offers, swap flows, and support moderation.</li>
+          <li>Technical data such as push notification tokens, session records, and basic request logs.</li>
+        </ul>
 
-          <h2 id="sharing">Data sharing</h2>
-          <p>
-            GaiaTakas does not sell user data. Data may be processed by infrastructure providers that help
-            us run the service, such as hosting, messaging, or payment partners. We do not share user data
-            with third-party advertising networks for ad targeting.
-          </p>
+        <h2 id="how-we-use-it">How We Use It</h2>
+        <ul>
+          <li>To create and secure user accounts.</li>
+          <li>To show nearby listings and make distance filters work correctly.</li>
+          <li>To operate messaging, reporting, moderation, and swap lifecycle actions.</li>
+          <li>To diagnose reliability, abuse, fraud, and safety issues.</li>
+        </ul>
 
-          <h2 id="deletion">Account deletion</h2>
-          <p>
-            Users can delete their account directly inside the app. When an account is deleted, active
-            session access is revoked and account data is removed according to the current service logic and
-            platform constraints.
-          </p>
+        <h2 id="sharing">Data Sharing</h2>
+        <p>
+          GaiaTakas does not sell user data. Data may be processed by infrastructure providers that help
+          us run the service, such as hosting, messaging, or payment partners. We do not share user data
+          with third-party advertising networks for ad targeting.
+        </p>
 
-          <h2 id="contact">Contact</h2>
-          <p>
-            For privacy or safety questions, contact <a class="mono" href="mailto:hello@ztudio.co">hello@ztudio.co</a>.
-          </p>
-        </article>
-      </main>
+        <h2 id="deletion">Account Deletion</h2>
+        <p>
+          Users can delete their account directly inside the app. When an account is deleted, active
+          session access is revoked and account data is removed according to the current service logic and
+          platform constraints.
+        </p>
+
+        <h2 id="contact">Contact</h2>
+        <p>
+          For privacy or safety questions, contact <a href="mailto:hello@ztudio.co">hello@ztudio.co</a>.
+        </p>
+      </article>
     </div>
   </body>
 </html>

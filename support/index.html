@@ -7,66 +7,127 @@
     <title>GaiaTakas Support</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/styles.css" />
+    <style>
+      .sub-page { max-width: 900px; margin: 0 auto; padding: 24px; min-height: 100vh; }
+      .sub-header { display: flex; justify-content: space-between; align-items: center; padding: 16px 28px; border-radius: 100px; margin-bottom: 48px; }
+      .sub-header .landing-brand { display: flex; align-items: center; gap: 12px; font-weight: 900; font-size: 20px; text-decoration: none; color: var(--text-main); }
+      .sub-nav { display: flex; gap: 8px; }
+      .sub-nav a { color: var(--text-muted); text-decoration: none; font-weight: 700; font-size: 13px; padding: 8px 16px; border-radius: 100px; transition: all 0.3s; border: 1px solid transparent; }
+      .sub-nav a:hover { color: var(--text-main); background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.1); }
+      .sub-nav a.active { color: #38BDF8; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.25); }
+
+      .page-hero { text-align: center; margin-bottom: 48px; }
+      .page-hero .eyebrow { color: #38BDF8; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; }
+      .page-hero h1 { font-size: 42px; font-weight: 900; margin: 0 0 12px; background: linear-gradient(135deg, #fff, #38BDF8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+      .page-hero .meta { color: var(--text-muted); font-size: 15px; max-width: 500px; margin: 0 auto; line-height: 1.6; }
+
+      .support-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 32px; }
+      .content-card { padding: 36px; border-radius: 24px; }
+      .content-card.full { grid-column: 1 / -1; }
+      .content-card h2 { font-size: 18px; font-weight: 800; margin: 0 0 20px; color: #38BDF8; }
+      .content-card p { color: var(--text-muted); font-size: 15px; line-height: 1.8; margin: 0 0 16px; }
+      .content-card ul { color: var(--text-muted); font-size: 14px; line-height: 2.2; padding-left: 20px; margin: 0; }
+      .content-card li::marker { color: var(--purple-light); }
+
+      .contact-row { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .contact-row:last-child { border-bottom: none; }
+      .contact-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+      .contact-icon svg { width: 20px; height: 20px; }
+      .contact-icon.icon-email { background: rgba(56, 189, 248, 0.12); color: #38BDF8; }
+      .contact-icon.icon-subject { background: rgba(176, 132, 245, 0.12); color: var(--purple-light); }
+      .contact-icon.icon-info { background: rgba(96, 221, 177, 0.12); color: var(--green-light); }
+      .contact-label { font-size: 11px; font-weight: 800; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+      .contact-value { font-size: 14px; font-weight: 700; color: var(--text-main); }
+      .contact-value a { color: #38BDF8; text-decoration: none; }
+
+      .email-cta { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding: 14px 28px; border-radius: 100px; background: linear-gradient(135deg, #38BDF8, var(--purple)); color: #fff; text-decoration: none; font-weight: 800; font-size: 14px; transition: all 0.3s; border: none; box-shadow: 0 8px 24px rgba(56,189,248,0.3); }
+      .email-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(56,189,248,0.4); }
+
+      @media (max-width: 640px) {
+        .sub-header { flex-direction: column; gap: 12px; padding: 16px 20px; border-radius: 24px; }
+        .page-hero h1 { font-size: 28px; }
+        .support-grid { grid-template-columns: 1fr; }
+        .content-card { padding: 24px; }
+      }
+    </style>
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="site-header-inner">
-          <a class="brand" href="/"><span class="brand-mark">G</span><span>GaiaTakas</span></a>
-          <nav class="nav-links">
-            <a href="/">Home</a>
-            <a href="/privacy/">Privacy</a>
-            <a href="/terms/">Terms</a>
-          </nav>
-          <div class="header-actions">
-            <a class="button button-primary" href="mailto:hello@ztudio.co?subject=GaiaTakas%20support">
-              Email support
-            </a>
+    <div class="sub-page">
+      <header class="sub-header glass-card">
+        <a class="landing-brand" href="/">
+          <div class="gaia-logo">
+            <svg class="gaia-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L5 22l.41-1.09C9.38 9.47 17 8 17 8z"/><path d="M12.73 3.27A9.97 9.97 0 0 1 21 11c0 .55-.05 1.09-.14 1.62"/></svg>
           </div>
-        </div>
+          GaiaTakas
+        </a>
+        <nav class="sub-nav">
+          <a href="/">Home</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/terms/">Terms</a>
+          <a href="/support/" class="active">Support</a>
+        </nav>
       </header>
 
-      <main class="support-grid">
-        <section class="policy-card">
-          <div class="eyebrow">Support</div>
-          <h1 style="margin-top: 16px;">Need help with GaiaTakas?</h1>
-          <p>
-            For support, safety, account, or moderation-related questions, contact us by email. This is
-            the right place for report follow-ups, deletion issues, and review questions.
-          </p>
+      <div class="page-hero">
+        <div class="eyebrow">Support</div>
+        <h1>Need Help?</h1>
+        <p class="meta">For support, safety, account, or moderation-related questions — we're here to help. Reach out via email below.</p>
+      </div>
 
-          <div class="contact-list">
-            <div class="contact-item">
-              <span class="contact-label">Support email</span>
-              <a class="mono" href="mailto:hello@ztudio.co">hello@ztudio.co</a>
+      <div class="support-grid">
+        <div class="content-card glass-card">
+          <h2>📬 Contact Us</h2>
+
+          <div class="contact-row">
+            <div class="contact-icon icon-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
             </div>
-            <div class="contact-item">
-              <span class="contact-label">Recommended subject</span>
-              <div class="mono">GaiaTakas Support</div>
-            </div>
-            <div class="contact-item">
-              <span class="contact-label">Include when possible</span>
-              <div>Account email, device type, problem summary, and screenshots if relevant.</div>
+            <div>
+              <div class="contact-label">Support Email</div>
+              <div class="contact-value"><a href="mailto:hello@ztudio.co">hello@ztudio.co</a></div>
             </div>
           </div>
-        </section>
 
-        <aside class="policy-card">
-          <h2 class="feature-title">Common reasons to contact support</h2>
+          <div class="contact-row">
+            <div class="contact-icon icon-subject">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Recommended Subject</div>
+              <div class="contact-value">GaiaTakas Support</div>
+            </div>
+          </div>
+
+          <div class="contact-row">
+            <div class="contact-icon icon-info">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Include When Possible</div>
+              <div class="contact-value" style="font-weight: 500; font-size: 13px; color: var(--text-muted);">Account email, device type, problem summary, and screenshots if relevant.</div>
+            </div>
+          </div>
+
+          <a class="email-cta" href="mailto:hello@ztudio.co?subject=GaiaTakas%20support">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Send Email
+          </a>
+        </div>
+
+        <div class="content-card glass-card">
+          <h2>💡 Common Reasons</h2>
           <ul>
             <li>Account access or sign-in issues</li>
             <li>Listing or photo upload problems</li>
             <li>Safety or fraud concerns</li>
             <li>Appeal or moderation questions</li>
             <li>Privacy or deletion requests</li>
+            <li>Bug reports & feature suggestions</li>
           </ul>
-        </aside>
-      </main>
+        </div>
+      </div>
     </div>
   </body>
 </html>
