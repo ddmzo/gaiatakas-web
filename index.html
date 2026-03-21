@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GaiaTakas | Çok Yakında</title>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./styles.css?v=8" />
+  <link rel="stylesheet" href="./styles.css?v=9" />
   <link rel="stylesheet" href="./share.css?v=1" />
 </head>
 
@@ -104,49 +104,100 @@
                     <span class="pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></span>
                     <span class="i18n" data-tr="Ev & Yaşam" data-en="Home & Living">Ev & Yaşam</span>
                   </div>
-                  <div class="pill">
-                    <span class="pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg></span>
-                    <span class="i18n" data-tr="Anne & Bebek" data-en="Mom & Baby">Anne & Bebek</span>
-                  </div>
-                  <div class="pill">
-                    <span class="pill-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></span>
-                    <span class="i18n" data-tr="Elektronik" data-en="Electronics">Elektronik</span>
-                  </div>
+              <!-- Status Bar -->
+              <div class="mockup-status-bar">
+                <span class="status-time">00:52</span>
+                <div class="status-icons">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 21.49L23.64 7c-.45-.34-4.93-4-11.64-4C5.28 3 .81 6.66.36 7l11.63 14.49.01.01.01-.01z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
                 </div>
-                <div class="explore-section-title i18n" data-tr="Vitrin" data-en="Showcase">Vitrin</div>
               </div>
 
-              <!-- Grid Flow -->
-              <div class="explore-grid-flow">
+              <!-- Header -->
+              <div class="explore-header">
+                <div class="explore-title gradient-text">Keşfet</div>
+                <div class="explore-settings">
+                  <div class="notify-dot"></div>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg>
+                </div>
+              </div>
+
+              <!-- Tabs -->
+              <div class="explore-tabs">
+                <div class="explore-tab active">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+                  <span class="i18n" data-tr="Keşfet" data-en="Explore">Keşfet</span>
+                </div>
+                <div class="explore-tab">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"></polyline><rect x="2" y="7" width="20" height="5"></rect><line x1="12" y1="22" x2="12" y2="7"></line><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+                  <span class="i18n" data-tr="Hediye Ürünler" data-en="Gift Items">Hediye Ürünler</span>
+                </div>
+              </div>
+
+              <!-- Search -->
+              <div class="search-bar-mockup">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6F6D8A" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <div class="search-text i18n" data-tr="Ürün, kategori veya marka ara..." data-en="Search item, category...">Ürün, kategori veya marka ara...</div>
+              </div>
+
+              <!-- Category Pills -->
+              <div class="explore-pills">
+                <div class="pill active">
+                  <div class="pill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg>
+                  </div>
+                  <span class="i18n" data-tr="Tüm" data-en="All">Tüm</span>
+                </div>
+                <div class="pill">
+                  <div class="pill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                  </div>
+                  <span class="i18n" data-tr="Ev & Yaşam" data-en="Home">Ev & Yaşam</span>
+                </div>
+                <div class="pill">
+                  <div class="pill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                  </div>
+                  <span class="i18n" data-tr="Anne & Bebek" data-en="Mom & Baby">Anne & Bebek</span>
+                </div>
+                <div class="pill">
+                  <div class="pill-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+                  </div>
+                  <span class="i18n" data-tr="Elektronik" data-en="Electronics">Elektronik</span>
+                </div>
+                <!-- ... additional pills omitted for space ... -->
+              </div>
+
+              <!-- Product Grid -->
+              <div class="explore-subtitle i18n" data-tr="Vitrin" data-en="Showcase">Vitrin</div>
+              <div class="explore-grid masonry-grid">
                 <div class="grid-column">
-                  <div class="explore-card large">
-                    <div class="explore-card-bg img-salon"></div>
+                  <!-- Large Item -->
+                  <div class="explore-card hero" style="background-image: url('https://picsum.photos/id/1029/400/600')">
+                    <div class="location-badge">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> <span>&lt;1km</span>
+                    </div>
                     <div class="explore-card-content">
-                      <div class="card-title i18n" data-tr="Retro Kamera" data-en="Retro Camera">Retro Kamera</div>
-                      <div class="card-meta i18n" data-tr="Teknoloji & Hobi" data-en="Tech & Hobby">Teknoloji & Hobi
-                      </div>
-                      <div class="card-price">₺2.500 <span class="card-est i18n" data-tr="tahmini değer"
-                          data-en="estimated value">tahmini değer</span></div>
+                      <div class="card-title">Satılık bina kolonu</div>
+                      <div class="card-price-green">₺1.071</div>
                       <div class="card-avatar user-1"></div>
                     </div>
                   </div>
-                  <div class="explore-card small">
-                    <div class="explore-card-bg img-guitar"></div>
+                  <!-- Small Item -->
+                  <div class="explore-card small" style="background-image: url('https://picsum.photos/id/1070/400/400')">
+                    <div class="location-badge">
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg> <span>&lt;1km</span>
+                    </div>
                     <div class="explore-card-content">
-                      <div class="card-title i18n" data-tr="Akustik Gitar" data-en="Acoustic Guitar">Akustik Gitar</div>
-                      <div class="card-meta i18n" data-tr="Sanat & Müzik" data-en="Art & Music">Sanat & Müzik</div>
-                      <div class="card-price">₺1.500 <span class="card-est i18n" data-tr="tahmini değer"
-                          data-en="estimated value">tahmini değer</span></div>
+                      <div class="card-title">Hırsız anahtarı</div>
+                      <div class="card-price-green">₺25.000</div>
                       <div class="card-avatar user-2"></div>
                     </div>
                   </div>
                 </div>
                 <div class="grid-column">
-                  <div class="explore-card small">
-                    <div class="explore-card-bg img-book"></div>
-                    <div class="explore-card-content">
-                      <div class="card-title i18n" data-tr="Seramik Kahve Seti" data-en="Ceramic Coffee Set">Seramik
-                        Kahve Seti</div>
                       <div class="card-meta i18n" data-tr="Ev & Yaşam" data-en="Home & Living">Ev & Yaşam</div>
                       <div class="card-price">₺800 <span class="card-est i18n" data-tr="tahmini değer"
                           data-en="estimated value">tahmini değer</span></div>
@@ -170,23 +221,38 @@
               </div>
 
               <!-- Bottom Tab Bar -->
+              <!-- Bottom Tab Bar Floating Glassmorphic Pill -->
               <div class="explore-bottom-nav">
                 <div class="nav-item active">
-                  <div class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg></div>
-                  <span class="i18n" data-tr="Keşfet" data-en="Explore">Keşfet</span>
+                  <div class="nav-active-dot"></div>
+                  <div class="nav-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect></svg>
+                  </div>
+                  <span class="i18n nav-label" data-tr="Keşfet" data-en="Explore">Keşfet</span>
                 </div>
                 <div class="nav-item">
-                  <div class="nav-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
-                  <span class="i18n" data-tr="İlan Ver" data-en="Add Listing">İlan Ver</span>
+                  <div class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                  </div>
+                  <span class="i18n nav-label" data-tr="İlan Ver" data-en="Add Listing">İlan Ver</span>
                 </div>
-                <div class="nav-fab"><img src="logo.png" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" /></div>
+                
+                <div class="nav-fab-container">
+                  <div class="nav-fab"><img src="logo.png" style="width:100%; height:100%; border-radius:50%; object-fit:cover;" /></div>
+                  <span class="i18n nav-label fab-label" data-tr="Hızlı Takas" data-en="Fast Swap">Hızlı Takas</span>
+                </div>
+
                 <div class="nav-item">
-                  <div class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path></svg></div>
-                  <span class="i18n" data-tr="Mesajlar" data-en="Messages">Mesajlar</span>
+                  <div class="nav-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10z"></path></svg>
+                  </div>
+                  <span class="i18n nav-label" data-tr="Mesajlar" data-en="Messages">Mesajlar</span>
                 </div>
                 <div class="nav-item">
-                  <div class="nav-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                  <span class="i18n" data-tr="Profil" data-en="Profile">Profil</span>
+                  <div class="nav-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  </div>
+                  <span class="i18n nav-label" data-tr="Profil" data-en="Profile">Profil</span>
                 </div>
               </div>
             </div>
