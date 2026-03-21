@@ -621,6 +621,7 @@ body {
 
 /* Bottom Navigation Bar */
 .explore-bottom-nav {
+  box-sizing: border-box;
   height: 74px;
   background: rgba(22, 17, 36, 0.5);
   backdrop-filter: blur(36px);
