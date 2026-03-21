@@ -315,9 +315,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
-  height: 28px;
-  margin-bottom: 8px;
-  font-size: 13px;
+  height: 20px;
+  margin-bottom: 0px;
+  font-size: 12px;
   font-weight: 800;
   color: #fff;
   letter-spacing: 0.5px;
@@ -350,7 +350,7 @@ body {
 }
 
 .explore-title.gradient-text {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
   background: linear-gradient(90deg, #FF8EF0, #79CEFF);
   -webkit-background-clip: text;
@@ -432,9 +432,15 @@ body {
 
 .explore-pills {
   display: flex;
-  gap: 4px;
-  overflow: visible;
+  gap: 12px;
+  overflow-x: auto;
   padding-bottom: 4px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.explore-pills::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .pill {
@@ -444,6 +450,7 @@ body {
   gap: 4px;
   width: auto;
   min-width: 44px;
+  flex: 0 0 auto;
 }
 
 .pill-icon {
@@ -526,16 +533,16 @@ body {
 }
 
 .explore-card.hero {
-  height: 240px;
-}
-.explore-card.large {
-  height: 200px;
-}
-.explore-card.medium {
   height: 180px;
 }
+.explore-card.large {
+  height: 160px;
+}
+.explore-card.medium {
+  height: 140px;
+}
 .explore-card.small {
-  height: 150px;
+  height: 120px;
 }
 
 .explore-card-bg {
