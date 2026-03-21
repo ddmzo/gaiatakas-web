@@ -103,34 +103,12 @@ body {
 
 .gaia-logo {
   position: relative;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--green-light);
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--bg-deep);
-  box-shadow: 0 2px 8px var(--green-glow);
-  margin: 8px 10px 8px 8px; /* Give space for the pseudo rings */
-}
-
-/* Inner ring */
-.gaia-logo::before {
-  content: '';
-  position: absolute;
-  top: -5px; left: -5px; right: -5px; bottom: -5px;
-  border: 1.5px solid rgba(139, 92, 246, 0.7);
-  border-radius: 50%;
-}
-
-/* Outer ring */
-.gaia-logo::after {
-  content: '';
-  position: absolute;
-  top: -10px; left: -10px; right: -10px; bottom: -10px;
-  border: 1.5px solid rgba(139, 92, 246, 0.3);
-  border-radius: 50%;
+  margin: 4px 8px 4px 4px;
 }
 
 .gaia-leaf {
@@ -350,8 +328,8 @@ body {
 .explore-header {
   font-size: 28px;
   font-weight: 900;
-  color: var(--purple-bright);
-  /* Specific purple from screenshot */
+  color: var(--pink);
+  text-shadow: 0 0 16px var(--pink-glow);
   letter-spacing: -0.03em;
 }
 
@@ -388,12 +366,10 @@ body {
 }
 
 .explore-tab.active {
-  background: rgba(36, 68, 62, 0.4);
-  /* Dark muted teal green from screenshot */
-  border: 1px solid rgba(96, 221, 177, 0.3);
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.4);
   border-radius: 12px;
   color: #fff;
-  /* White text for active tab in screenshot */
 }
 
 .explore-pills {
@@ -416,9 +392,60 @@ body {
 }
 
 .pill.active {
-  background: rgba(129, 77, 229, 0.2);
-  border-color: rgba(129, 77, 229, 0.5);
-  color: var(--purple-bright);
+  background: rgba(139, 92, 246, 0.5);
+  border-color: rgba(139, 92, 246, 0.8);
+  color: #fff;
+}
+.pill.active span.i18n {
+  color: #fff;
+  font-weight: 900;
+}
+
+.search-bar-mockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 100px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.pill {
+  white-space: nowrap;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  justify-content: center;
+  position: relative;
+}
+.pill span.i18n {
+  position: absolute;
+  bottom: -20px;
+  font-size: 9px;
+  width: 70px;
+  text-align: center;
+  white-space: normal;
+  line-height: 1;
+}
+.explore-pills {
+  overflow: visible;
+  padding-bottom: 24px;
+  gap: 12px;
 }
 
 .explore-section-title {
@@ -593,8 +620,8 @@ body {
 
 /* Active colored badges for items based on mobile nav upgrade */
 .nav-item.active {
-  color: var(--purple);
-  text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+  color: var(--pink);
+  text-shadow: 0 0 10px var(--pink-glow);
 }
 .nav-item:nth-child(2).active { color: var(--blue); text-shadow: 0 0 10px var(--blue-glow); }
 .nav-item:nth-child(4).active { color: var(--pink); text-shadow: 0 0 10px var(--pink-glow); }
@@ -607,8 +634,8 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--purple);
-  box-shadow: 0 0 6px var(--purple-glow);
+  background: var(--pink);
+  box-shadow: 0 0 6px var(--pink-glow);
   z-index: 5;
 }
 .nav-item:nth-child(2).active::before { background: var(--blue); box-shadow: 0 0 6px var(--blue-glow); }
@@ -628,20 +655,30 @@ body {
 }
 
 .nav-fab {
-  width: 52px;
-  height: 52px;
-  border-radius: 26px;
-  background: linear-gradient(135deg, #A855F7, #6366F1, #38BDF8);
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  background: var(--bg-deep);
   color: #fff;
-  font-size: 24px;
-  font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateY(-8px);
-  box-shadow: 0 4px 18px rgba(99, 102, 241, 0.55);
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  transform: translateY(-16px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.8), 0 0 30px rgba(139,92,246,0.3), inset 0 0 12px rgba(255,255,255,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   flex-shrink: 0;
+  padding: 4px;
+  position: relative;
+}
+.nav-fab::after {
+  content: 'Hızlı Takas';
+  position: absolute;
+  bottom: -18px;
+  font-size: 9px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  text-align: center;
 }
 
 /* --- END PHONE MOCKUP UI --- */
