@@ -508,22 +508,27 @@ body {
 }
 
 .explore-card {
-  border-radius: 24px;
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
-  background: #1c1535;
+  background: #0d0a17; /* Darker bg so bottom area blends into the image */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   border: 1px solid rgba(255,255,255,0.1);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  /* Make images fit horizontally and anchor to top */
+  background-size: 100% auto !important;
+  background-repeat: no-repeat !important;
+  background-position: top center !important;
 }
 
 .explore-card::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(to top, rgba(10,8,16, 0.95) 0%, rgba(10,8,16, 0.3) 50%, transparent 100%);
+  /* Gradient starts fully dark at bottom to blend with any empty space left by square images */
+  background: linear-gradient(to top, rgba(10,8,16, 0.95) 0%, rgba(10,8,16, 0.6) 30%, transparent 80%);
   pointer-events: none;
   z-index: 1;
 }
@@ -549,8 +554,9 @@ body {
   position: absolute;
   inset: 0;
   opacity: 0.8;
-  background-size: cover;
-  background-position: center;
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 /* Simulated image backgrounds using high quality unsplash links resembling the aesthetic items */
@@ -581,60 +587,65 @@ body {
 .explore-card-content {
   position: relative;
   z-index: 2;
-  padding: 12px 8px 10px;
+  padding: 6px 6px 8px;
   background: transparent;
 }
 
 .card-title {
   font-weight: 800;
-  font-size: 12px;
+  font-size: 8px;
   color: #fff;
   margin-bottom: 2px;
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.9);
-  line-height: 1.25;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+  line-height: 1.1;
 }
 
 .card-price-green {
   font-weight: 900;
-  font-size: 13px;
+  font-size: 9px;
   color: #38E293;
-  margin-top: 2px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
-  letter-spacing: -0.5px;
+  margin-top: 1px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  letter-spacing: -0.2px;
 }
 
 .location-badge {
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 6px;
+  left: 6px;
   background: rgba(14, 114, 60, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-radius: 6px;
-  padding: 3px 6px;
+  border-radius: 4px;
+  padding: 2px 4px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
   color: #38E293;
   z-index: 3;
 }
 
+.location-badge svg {
+  width: 6px !important;
+  height: 6px !important;
+}
+
 .location-badge span {
-  font-size: 9px;
+  font-size: 6px;
   font-weight: 800;
 }
 
 .card-avatar {
   position: absolute;
-  right: 8px;
-  bottom: 8px;
-  width: 20px;
-  height: 20px;
+  right: 6px;
+  bottom: 6px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   background-size: cover;
   background-position: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
   z-index: 3;
 }
 
