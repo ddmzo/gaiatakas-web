@@ -956,6 +956,22 @@ body {
   width: 96px;
 }
 
+/* Make swap items bigger when used inside the large feature cards */
+.loop-visual .nano-item {
+  width: 130px;
+  padding: 10px;
+  border-radius: 16px;
+}
+.loop-visual .nano-label {
+  font-size: 13px;
+  margin-top: 4px;
+}
+.loop-visual .nano-circle {
+  width: 56px;
+  height: 56px;
+  font-size: 24px;
+}
+
 .nano-item-left {
   background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(96, 221, 177, 0.08));
   border-color: rgba(96, 221, 177, 0.2);
